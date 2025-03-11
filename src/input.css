@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@theme{
+    --color-primary: #041341;
+    --color-light: #ffffff;
+    --color-dark: #1b1e1d;
+    --color-darkGray: #545454;
+    --color-gray: #112ba7;
+    --color-button: #036bff;
+    --color-mobile: #1c2ea3;
+    --color-mobilee: #dddddd;
+    --color-transparent: transparent;
+    --color-bg-sm: #0f58ff;
+    --color-best: #002aba;
+
+    --font-poppins: "Poppins","sans-serif";
+}
+
+
+@layer base {
+
+    p,
+    li,
+    a {
+        @apply text-base;
+    }
+}
+
+@layer components{
+    .container {
+        @apply max-w-[90rem] p-4 w-full mx-auto place-content-center;
+    }
+
+    /* BURGER MENU */
+    .burger__menu {
+        @apply md:hidden;
+    }
+
+    .burger__menu span {
+        @apply w-[1.5rem] h-[.2rem] bg-light block transition-all;
+    }
+
+    .burger__menu span:nth-child(2) {
+        @apply my-1;
+    }
+
+    .burger__menu.open span:first-child {
+        @apply transform translate-y-[9px] rotate-[225deg] transition-all;
+    }
+
+    .burger__menu.open span:nth-child(2) {
+        @apply opacity-0 transition-all;
+    }
+
+    .burger__menu.open span:last-child {
+        @apply transform translate-y-[-6px] rotate-[-225deg] transition-all;
+    }
+
+}
+
+/* HEADER  START*/
+.header{
+    @apply bg-bg-sm py-5 px-4 relative md:fixed md:bg-transparent md:py-5
+    md:border-b-1 md:border-mobile md:w-full;
+}
+
+.header__branding img{
+    @apply w-[140px] h-[30px] md:w-[130px] md:h-[25px];
+}
+
+.header__wrapper{
+    @apply flex items-center justify-between w-full md:gap-25 md:items-center md:justify-center ;
+}
+
+.header__wrapper .register{
+    @apply hidden md:block;
+}
+
+.header__wrapper .header__nav ul {
+    @apply p-0 m-0 absolute top-[70px] max-h-[0] z-999 right-0 bg-light w-full overflow-hidden md:bg-transparent md:text-light md:static md:max-h-full md:w-auto md:flex md:z-99 md:transition-none md:bg-mobile;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.header__wrapper .header__nav ul.open {
+   @apply max-h-[21.3rem] md:transition-none ; /* Expands smoothly */
+   transition: max-height 0.5s ease-in-out;
+}
+
+.header__wrapper .header__nav ul li{
+    @apply px-6 py-4 border-b-[1px] border-mobilee md:border-b-0 ;
+}
+
+.header__wrapper .header__nav ul li a{
+    @apply text-[13px] md:text-[14px];
+}
+
+.header__wrapper .register{
+    @apply md:text-light md:border-1 md:border-button md:bg-button md:px-6 md:py-3 rounded-md
+    md:flex md:items-center md:justify-between md:gap-2 md:text-[14px];
+}
+
+.header__wrapper .register i{
+    @apply text-[13px] ;
+}
+
+
+
+/* HEADER  END*/
+
+/* BANNER START */
+.banner{
+   @apply text-light ;
+}
+.banner > img{
+    @apply bg-cover md:h-dvh  object-cover h-[135vh];
+}
+
+.banner__info .img__p{
+ @apply flex items-center gap-2 bg-best w-[17rem] py-[8px] px-[20px] rounded-md text-center;
+}
+
+.banner__info p img{
+    @apply w-[13px] h-[14px];
+}
+
+.banner__info h1{
+    @apply text-[33px] leading-11 font-semibold md:text-[3rem] md:leading-15;
+}
+
+.banner__info__bottom a{
+    @apply bg-button text-light py-[13px] px-[33px] rounded-md outline-hidden text-[1.1rem] ;
+}
+
+.banner__info{
+    @apply absolute top-[25%] flex flex-col gap-[1rem] md:left-[18%];
+}
+
+.banner__info__bottom{
+    @apply space-y-[1rem];
+}
+
+.banner-image{
+    @apply absolute top-[88%] md:top-[15%] md:left-[50%];
+}
+
+.banner-image img{
+    @apply md:w-[35rem];
+}
+
+
+
+
+/* BANNER END */

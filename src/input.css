@@ -124,7 +124,7 @@
 }
 
 .banner__info h1{
-    @apply text-[33px] leading-11 font-semibold md:text-[3rem] md:leading-15;
+    @apply text-[33px] leading-11 font-semibold md:text-[2.8rem] md:leading-12;
 }
 
 .banner__info__bottom a{
@@ -132,15 +132,15 @@
 }
 
 .banner__info{
-    @apply absolute top-[25%] flex flex-col gap-[1rem] md:left-[18%];
+    @apply absolute top-[30%] flex flex-col gap-[1rem] md:left-[17%];
 }
 
 .banner__info__bottom{
-    @apply space-y-[1rem];
+    @apply space-y-[1rem] md:flex md:items-center md:justify-start gap-[2rem];
 }
 
 .banner-image{
-    @apply absolute top-[88%] md:top-[15%] md:left-[50%];
+    @apply absolute top-[88%] md:top-[18%] md:left-[52%];
 }
 
 .banner-image img{

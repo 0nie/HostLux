@@ -452,9 +452,6 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -1818,14 +1815,9 @@
   .transform-view {
     transform-box: view-box;
   }
-  .sm\:hidden {
-    @media (width >= 40rem) {
-      display: none;
-    }
-  }
-  .md\:hidden {
+  .md\:text-\[\.7rem\] {
     @media (width >= 48rem) {
-      display: none;
+      font-size: .7rem;
     }
   }
 }
@@ -2078,11 +2070,11 @@
   --tw-font-weight: var(--font-weight-semibold);
   font-weight: var(--font-weight-semibold);
   @media (width >= 48rem) {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
   @media (width >= 48rem) {
-    --tw-leading: calc(var(--spacing) * 15);
-    line-height: calc(var(--spacing) * 15);
+    --tw-leading: calc(var(--spacing) * 12);
+    line-height: calc(var(--spacing) * 12);
   }
 }
 .banner__info__bottom a {
@@ -2101,29 +2093,39 @@
 }
 .banner__info {
   position: absolute;
-  top: 25%;
+  top: 30%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   @media (width >= 48rem) {
-    left: 18%;
+    left: 17%;
   }
 }
 .banner__info__bottom {
+  gap: 2rem;
   :where(& > :not(:last-child)) {
     --tw-space-y-reverse: 0;
     margin-block-start: calc(1rem * var(--tw-space-y-reverse));
     margin-block-end: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  }
+  @media (width >= 48rem) {
+    display: flex;
+  }
+  @media (width >= 48rem) {
+    align-items: center;
+  }
+  @media (width >= 48rem) {
+    justify-content: flex-start;
   }
 }
 .banner-image {
   position: absolute;
   top: 88%;
   @media (width >= 48rem) {
-    top: 15%;
+    top: 18%;
   }
   @media (width >= 48rem) {
-    left: 50%;
+    left: 52%;
   }
 }
 .banner-image img {

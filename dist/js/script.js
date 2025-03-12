@@ -7,3 +7,13 @@ if (burger && headerA) {
         headerA.classList.toggle("open");
     });
 }
+
+module.exports = {
+  theme: {
+    extend: {
+      backgroundImage: {
+        'pricing-bg': "url('../img/pricing-bg.jpg')",
+      }
+    }
+  }
+}
